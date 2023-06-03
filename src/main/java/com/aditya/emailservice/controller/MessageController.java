@@ -20,8 +20,8 @@ public class MessageController {
         Mails mail = new Mails();
         mail.setMailFrom(message.getSender());
         mail.setMailTo("muhammad2004fotih@gmail.com");
-        mail.setMailSubject("From Portfolio project");
-        mail.setMailContent(message.getMessage());
+        mail.setMailSubject("Message From " + message.getFullName());
+        mail.setMailContent(message.getMessage()+" \n Message From "+ message.getSender());
         messageService.sendEmail(mail);
         return "ok";
     }

@@ -4,7 +4,9 @@ import lombok.Getter;
 
 @Getter
 public class MessageDTO {
+    private String fullName;
     private String sender;
     private String message;
-    private String time;
+
+
 }
